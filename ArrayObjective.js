@@ -49,7 +49,7 @@ function timesTen(num){
   return "I love you times" + num * 10;
 };
 
-//console.log(numbers.map(timesTen));
+console.log(numbers.map(timesTen));
 
 /* 
   Problem 4: Filter Friends
@@ -71,16 +71,16 @@ const femaleFriends = friends.filter(element => element.gender === 'F').map(elem
 
 
 const male = friends.filter(
-function (element){
-  return element .gender === 'M'
-}); // finish this
-male = male.map(function (element){
-         return element.name;
-         })
+  function (element){
+    return element.gender === 'M'
+  }); // finish this
+let newmale = male.map(function (element){
+  return element.name;
+})
 
 
 
 
 
 console.log(femaleFriends);
-console.log(male);
+console.log(newmale);
