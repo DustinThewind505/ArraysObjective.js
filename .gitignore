@@ -1,0 +1,4 @@
+# THE PYTHON GITIGNORE FROM LAMBDA REPO
+.vscode
+*.pyc
+__pycache__
