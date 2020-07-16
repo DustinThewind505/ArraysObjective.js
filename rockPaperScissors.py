@@ -24,3 +24,6 @@ choice_options = {
     3: “scissors”,
     9: “quit”
 }
+
+computer_choice = random.randint(1, 3) # use the random module imported above
+user_choice = None
