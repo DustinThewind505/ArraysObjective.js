@@ -24,11 +24,11 @@ store1 = Store("Manny's", [Department(1, "foods", []), Department(2, "cleaning",
 while True:
     store1.print_welcome()
 
-    selection = int(input("Which department would you like to visit? "))
+    selection = input("Which department would you like to visit? ")
 
     if selection == "quit":
         break
 
-    choosen_dept = store1.departments[selection-1]
+    choosen_dept = store1.departments[int(selection)-1]
 
     print(f"You picked the {choosen_dept.name} department")
