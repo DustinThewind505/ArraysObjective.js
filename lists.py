@@ -39,14 +39,36 @@ def delete_Bob(arr):
        
 
 
-## ====== Printing ======
-use_Bob(55)
+### ================== Printing ==================
+# use_Bob(55)
 
-get_Bob(array)
+# get_Bob(array)
 
-add_Bob(array, "Tammy")
+# add_Bob(array, "Tammy")
 
-get_Bob_by_index(array, 0)
+# get_Bob_by_index(array, 0)
 
-delete_Bob(array)
+# delete_Bob(array)
 
+for (index, element) in enumerate(array):
+    print(f'Element {index} is {element}')
+    #print(f'Element {index} is {array[index]}')
+
+
+
+### ================== List comprehensions ==================
+numbers = [1, 4, 9, 16, 25]
+
+# Create a new list of sqaured numbers from numbers list
+squared = []
+
+for num in numbers:
+    squared.append(num * num)
+
+print(squared)
+
+# or
+
+cooler_squared = [num * num for num in numbers]
+
+print(cooler_squared)
