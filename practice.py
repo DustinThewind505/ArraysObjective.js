@@ -1,39 +1,29 @@
-# x = 321
-# y = 154323
+### ==================== Practice ====================
+# ========== Arrays ==========
+array = ['Slipknot', 'Korn', 'Limp Bizkit', '311', 'Pantera']
 
-# if x == y:
-#     print(f'{x} and {y} are equal')
-# else:
-#     if x < y:
-#         print(f'{x} is less than {y}')
-#     else:
-#         print(f'{x} is greater than {y}')
+# ===== CRUD =====
+# == GET ==
+def get_bands(arr):
+    print(f'\n{arr}\n')
 
-### ===================================== Lists(arrays) =====================================
-# evens = []
+def get_bands_by_id(arr, num):
+    print(f'\n{arr[num]}\n')
 
-# for i in range(501):
-#     if i % 10 == 0:
-#         evens.append(i)
+# == POST ==
+def add_band(arr, str):
+    arr.append(str)
+    print(f'\n{arr}\n')
 
-# print(evens)
+# == PUT ==
+def edit_list(arr, num, str):
+    arr[num] = str
+    print(f'\n{arr}\n')
 
-# ### ====== List Comprhension(short hand) ======
-# odds = [i for i in range(501) if i % 30 == 0]
+get_bands(array)
 
-# print(odds)
+get_bands_by_id(array, 0)
 
-### ===================================== Multiply =====================================
-array = [1, 2, 3, 210]
+add_band(array, "Sublime")
 
-def multiply2(int):
-    return int*2
-
-print(multiply2(210))
-
-def listMultiply2(a):
-    for i in range(len(a)):
-        a[i] *= 2
-    return a
-
-print(listMultiply2(array))
+edit_list(array, 4, "Rob Zombie")

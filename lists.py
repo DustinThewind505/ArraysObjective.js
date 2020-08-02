@@ -27,9 +27,12 @@ def get_Bob_by_index(arr, num):
 def add_Bob(arr, str):
     array.append(str)
     print(array)
-    print(f'{len(arr)}\n')
+    #print(f'{len(arr)}\n')
 
 # ============ PUT ============
+def change_Bob(arr, str):
+    arr[0] = str
+
 
 # ============ DELETE ============
 def delete_Bob(arr):
@@ -46,6 +49,8 @@ def delete_Bob(arr):
 
 add_Bob(array, "tammy")
 
+# change_Bob(array, "Teddy")
+
 # get_Bob_by_index(array, 0)
 
 # delete_Bob(array)
@@ -56,34 +61,36 @@ for (index, element) in enumerate(array):
     print(f'Element {index} is {element}')
     #print(f'Element {index} is {array[index]}')
 
-
+# ============ Change Array ============
+change_Bob(array, "Teddy")
+get_Bob(array)
 
 ### ================== List comprehensions ==================
-numbers = [1, 4, 9, 16, 25]
+# numbers = [1, 4, 9, 16, 25]
 
-# Create a new list of sqaured numbers from numbers list
-squared = []
+# # Create a new list of sqaured numbers from numbers list
+# squared = []
 
-# Regular
-for num in numbers:
-    squared.append(num * num)
+# # Regular
+# for num in numbers:
+#     squared.append(num * num)
 
-print(squared)
+# print(squared)
 
-# or return statement with for loop inside of empty array
+# # or return statement with for loop inside of empty array
 
-cooler_squared = [num * num for num in numbers]
+# cooler_squared = [num * num for num in numbers]
 
-print(cooler_squared)
+# print(cooler_squared)
 
-# or return statement with for loop inside of empty array with conditional
+# # or return statement with for loop inside of empty array with conditional
 
-evens = [num for num in numbers if num % 2 == 0]
+# evens = [num for num in numbers if num % 2 == 0]
 
-print(evens)
+# print(evens)
 
-# or return statement with for loop inside of empty array with conditional + functions on elements in the for loop
+# # or return statement with for loop inside of empty array with conditional + functions on elements in the for loop
 
-named_T = [name.capitalize() for name in array if name[0].lower() == "t"]
+# named_T = [name.capitalize() for name in array if name[0].lower() == "t"]
 
-print(named_T)
+# print(named_T)

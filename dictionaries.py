@@ -33,6 +33,9 @@ def add_fam(obj, role, name):
 
 
 # ============ PUT ============
+def change_fam(obj, role, name):
+    obj[role] = name
+
 
 # ============ DELETE ============
 def delete_Bob(obj):
@@ -48,6 +51,8 @@ def delete_Bob(obj):
 
 add_fam(object, "Waitress", "Tina")
 
+#change_fam(object, "Waitress", "Gene")
+
 #delete_Bob(object)
 
 # ============ Looping ============
@@ -58,3 +63,9 @@ for key, value in object.items():
 print("Jimmy Pesto" in object.values())
 print("Tina" in object.values())
 
+
+# ============ Change Object ============
+change_fam(object, "Waitress", "Gene")
+
+for key, value in object.items():
+    print(f'{key} : {value}\n')
