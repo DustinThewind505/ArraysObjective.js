@@ -42,10 +42,19 @@ def delete_Bob(obj):
 
 
 ### ================== Printing ==================
-get_Family(object)
+#get_Family(object)
 
-get_Bob_by_key(object, "Co-Owner1")
+#get_Bob_by_key(object, "Co-Owner1")
 
 add_fam(object, "Waitress", "Tina")
 
-delete_Bob(object)
+#delete_Bob(object)
+
+# ============ Looping ============
+for key, value in object.items():
+    print(f'{key} : {value}\n')
+
+# ============ Check if exists ============
+print("Jimmy Pesto" in object.values())
+print("Tina" in object.values())
+

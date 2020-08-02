@@ -50,6 +50,8 @@ add_Bob(array, "tammy")
 
 # delete_Bob(array)
 
+
+### ================== ENUMERATION ==================
 for (index, element) in enumerate(array):
     print(f'Element {index} is {element}')
     #print(f'Element {index} is {array[index]}')
