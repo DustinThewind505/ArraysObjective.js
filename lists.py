@@ -1,6 +1,6 @@
 ### ================== Python LIST Basics ==================
 # ====== Variables ======
-array = ["Bob", "Linda", "Gene", "Mr. Fishowner"]
+array = ["Bob", "Linda", "Gene", "Mr. Fishowner", "Tina"]
 
 name = "Bob"
 age = 42
@@ -44,7 +44,7 @@ def delete_Bob(arr):
 
 # get_Bob(array)
 
-# add_Bob(array, "Tammy")
+add_Bob(array, "tammy")
 
 # get_Bob_by_index(array, 0)
 
@@ -62,13 +62,26 @@ numbers = [1, 4, 9, 16, 25]
 # Create a new list of sqaured numbers from numbers list
 squared = []
 
+# Regular
 for num in numbers:
     squared.append(num * num)
 
 print(squared)
 
-# or
+# or return statement with for loop inside of empty array
 
 cooler_squared = [num * num for num in numbers]
 
 print(cooler_squared)
+
+# or return statement with for loop inside of empty array with conditional
+
+evens = [num for num in numbers if num % 2 == 0]
+
+print(evens)
+
+# or return statement with for loop inside of empty array with conditional + functions on elements in the for loop
+
+named_T = [name.capitalize() for name in array if name[0].lower() == "t"]
+
+print(named_T)
