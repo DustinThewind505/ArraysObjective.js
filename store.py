@@ -1,3 +1,27 @@
+### =============== Categories ===============
+class Catergory:
+    def __init__(self, name, description, products):
+        self.name = name
+        self.description = description
+        self.products = products
+
+    def __str__(self):
+        return f"{self.name}: {self.description}"
+
+    def __repr__(self):
+            return f"self.name = {self.name}, self.description = {self.description}, self.products = {self.products}"
+
+
+# ======= Dictionaries? =======
+hiking_category = Catergory("Hiking", "Long distance, Section, and Day hiking", [])
+camping_category = Catergory("Camping", "Summer and Winter camping", [])
+climbing_category = Catergory("Climbing", "Ropes and stuff", [])
+
+sandwhich_category = Catergory("Sandwhich", "Vietnamese sandwhiches", [])
+pho_category = Catergory("Pho", "Vietnamese Soup", [])
+bear_liver_category = Catergory("Bear Liver", "Meat", [])
+
+
 
 class Store:
     def __init__(self, name, catergories):
@@ -5,18 +29,23 @@ class Store:
         self.catergories = catergories
 
     def __str__(self):
-        return f"Welcome to {self.name}, here are the catergories {self.catergories}"
+        output = f"\nWelcome to {self.name}!"
+        for catergory in self.catergories:
+            output += f"\n {catergory}"
+        return output
 
     def __repr__(self):
         return f"self.name = {self.name}, self.catergories = {self.catergories}"
 
-hiking_store = Store("Gander Mountain", ["Hiking", "Camping", "Climbing"])
-food_store = Store("Lee's Bakery", ["Sandwhich", "Pho", "Bear Liver"])
-print(repr(hiking_store))
-print(repr(food_store))
+### =============== Stores ===============
+hiking_store = Store("Gander Mountain", [hiking_category, camping_category, climbing_category])
+food_store = Store("Lee's Bakery", [sandwhich_category, pho_category, bear_liver_category])
 
+print(hiking_store)
+print(food_store)
 
-
+# print(repr(hiking_category))
+# print(repr(camping_category))
 
 
 
