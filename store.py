@@ -43,6 +43,7 @@ food_store = Store("Lee's Bakery", [sandwhich_category, pho_category, bear_liver
 ### =============== REPL <- READ EVALUATE PRINT LOOP ===============
 choice = -1
 
+print('Type "Q" to exit')
 print(food_store)
 # LOOP
 while True:
@@ -54,10 +55,17 @@ while True:
 
         # PRINT
         print(chosen_category)
+
+    # Error handling
     except IndexError:
         print("Please enter a valid number")
     except ValueError:
         print("Please enter a valid number")
+
+    finally:
+        # Exit program
+        if (choice == "Q" or "q"):
+            break
 
 
 
