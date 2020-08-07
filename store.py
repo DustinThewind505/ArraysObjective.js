@@ -19,8 +19,10 @@ class Store:
 
     def __str__(self):
         output = f"\nWelcome to {self.name}!"
+        counter = 1
         for category in self.categories:
-            output += f"\n {category}"
+            output += f"\n {counter}. {category.name}"
+            counter += 1
         return output
 
     def __repr__(self):
@@ -30,14 +32,34 @@ class Store:
 hiking_store = Store("Gander Mountain", [hiking_category, camping_category, climbing_category])
 food_store = Store("Lee's Bakery", [sandwhich_category, pho_category, bear_liver_category])
 
-print(hiking_store)
-print(food_store)
+#print(hiking_store)
+#print(food_store)
 
 # print(repr(hiking_category))
 # print(repr(camping_category))
 
 
+
 ### =============== REPL <- READ EVALUATE PRINT LOOP ===============
+choice = -1
+
+print(food_store)
+# LOOP
+while True:
+    # READ
+    choice = input("Please choose a category (#): ")
+    try:
+        # EVALUATE
+        chosen_category = food_store.categories[int(choice) - 1]
+
+        # PRINT
+        print(chosen_category)
+    except IndexError:
+        print("Please enter a valid number")
+    except ValueError:
+        print("Please enter a valid number")
+
+
 
 
 

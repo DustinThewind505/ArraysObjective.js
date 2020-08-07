@@ -3,8 +3,8 @@ import random
 import time
 
 ### ==================== VARIABLES ====================
-my_range = 100
-my_size = 15
+my_range = 1000
+my_size = 100
 
 random_nums = random.sample(range(my_range), my_size)
 
@@ -20,10 +20,13 @@ def linear_search(arr, target):
             return True
     return False
 
-random_nums.sort()
-print(random_nums)
+print("Linear")
+start = time.time()
+print(linear_search(random_nums, num_to_find))
+end = time.time()
+print(f"Runtime: {end - start}")
 
-# ========== BINARY SEARCH ==========
+# ========== BINARY SEARCH *O(log n) logarithmic time*==========
 def binary_search(arr, target):
     start = 0
     end = (len(arr) - 1)
@@ -41,4 +44,9 @@ def binary_search(arr, target):
 
     return found
 
-print(binary_search(random_nums, 13))
+print("Binary")
+start = time.time()
+random_nums.sort()
+print(binary_search(random_nums, num_to_find))
+end = time.time()
+print(f"Runtime: {end - start}")
