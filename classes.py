@@ -1,30 +1,31 @@
-class LatLon:
-    def __init__(self, lat, lon):
-        self.lat = lat
-        self.lon = lon
-
-
-class Waypoint(LatLon):
-    def __init__(self, name, lat, lon):
-        super().__init__(lat, lon)
-        self.name = name
+### ============ Classes ============
+class Bicycle():
+    def __init__(self, number_of_wheels, description):
+        self.number_of_wheels = number_of_wheels
+        self.description = description
 
     def __str__(self):
-        return f"Waypoint: {self.name}, {self.lat}, {self.lon}"
+        print(f"Has this many wheels: {self.number_of_wheels}\n{self.description}")
 
-class Geocache(Waypoint):
-    def __init__(self, name, difficulty, size, lat, lon):
-        super().__init__(name, lat, lon)
-        self.difficulty = difficulty
-        self.size = size
 
-    def __str__(self):
-        return f"Geocache: {self.name}, {self.difficulty}, {self.size}, {self.lat}, {self.lon}"
+    def wipeout(self):
+        print("WIPEOUT!")
 
-waypoint = Waypoint("Catacombs", 41.7050, -121.51521)
+class Unicycle(Bicycle):
+    def __init__(self, number_of_wheels, description, bounceyness):
+        super().__init__(number_of_wheels, description)
+        self.bounceyness = bounceyness
 
-print(waypoint)
+### ============ Using Classes ============
+mountain_bike = Bicycle(2, "Can go up and down dirt trails")
+stunt_unicycle = Unicycle(1, "You can juuggle while you ride", "Very Bouncey")
 
-geocache =  Geocache("Newberry Views", "diff: 1.5", "size: 2", 44.05137, -121.41556)
+# mountain_bike.wipeout()
+# stunt_unicycle.wipeout()
 
-print(geocache)
+# print(mountain_bike.number_of_wheels)
+# print(stunt_unicycle.number_of_wheels)
+# print(mountain_bike)
+print(stunt_unicycle.number_of_wheels)
+print(stunt_unicycle.description)
+print(stunt_unicycle.bounceyness)
