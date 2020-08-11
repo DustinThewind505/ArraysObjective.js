@@ -5,7 +5,7 @@ class Bicycle():
         self.description = description
 
     def __str__(self):
-        print(f"Has this many wheels: {self.number_of_wheels}\n{self.description}")
+        return f"\nHas this many wheels: {self.number_of_wheels}\n{self.description}"
 
 
     def wipeout(self):
@@ -15,17 +15,18 @@ class Unicycle(Bicycle):
     def __init__(self, number_of_wheels, description, bounceyness):
         super().__init__(number_of_wheels, description)
         self.bounceyness = bounceyness
+    
+    def __str__(self):
+        parent_str = super().__str__()
+        return f"{parent_str}: This thing is {self.bounceyness}!"
 
 ### ============ Using Classes ============
 mountain_bike = Bicycle(2, "Can go up and down dirt trails")
-stunt_unicycle = Unicycle(1, "You can juuggle while you ride", "Very Bouncey")
+stunt_unicycle = Unicycle(1, "You can juggle while you ride", "Very Bouncey")
 
 # mountain_bike.wipeout()
 # stunt_unicycle.wipeout()
 
-# print(mountain_bike.number_of_wheels)
-# print(stunt_unicycle.number_of_wheels)
-# print(mountain_bike)
-print(stunt_unicycle.number_of_wheels)
-print(stunt_unicycle.description)
-print(stunt_unicycle.bounceyness)
+
+print(mountain_bike)
+print(stunt_unicycle)
