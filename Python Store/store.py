@@ -1,9 +1,12 @@
 ### ======= Imports =======
 from category import Category
+from products import Sneakers
 
 ### ======= Categories/Dictionaries? =======
+ugz = Sneakers("Ugzz", "49.99", "12", "Ugzz Boots")
+
 hiking_category = Category("Hiking", "Long distance, Section, and Day hiking", [])
-camping_category = Category("Camping", "Summer and Winter camping", [])
+camping_category = Category("Camping", "Summer and Winter camping", [ugz])
 climbing_category = Category("Climbing", "Ropes and stuff", [])
 
 sandwhich_category = Category("Sandwhich", "Vietnamese sandwhiches", [])
