@@ -31,3 +31,12 @@ def print_loops(num): # O(1) + O(n^2) + O(1) ==> reduces to O(n^2)
     return result # O(1)
 
 print(print_loops(3))
+
+### ======================= LOGARITHMIC Time =======================
+def print_loops_faster(num):
+
+    while num >= 1: # O(log n)
+        print(f'\n{num}') #O(1)
+        num = num // 2 # O(1)
+
+print(print_loops_faster(99))
