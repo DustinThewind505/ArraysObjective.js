@@ -8,6 +8,14 @@ class Linkedlist:
     def __init__(self):
         self.head = None    # ===== First Node =====
         self.tail = None    # ===== Last Node =====
+
+    def __str__(self):
+        output = ''
+        current_node = self.head
+        while current_node is not None:
+            output += f'{current_node.value}--> '
+            current_node = current_node.next_node
+        return output
     
 
     def add_to_head(self, value):
@@ -64,8 +72,7 @@ class Linkedlist:
 linked_list = Linkedlist()
 linked_list.add_to_head(0)
 linked_list.add_to_tail(1)
-print(linked_list.contains(1))
-print(linked_list.contains(2))
+print(linked_list)
 
 
 
