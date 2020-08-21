@@ -4,14 +4,14 @@ class Node:
         self.next_node = next_node
 
     def get_value(self):
-    return self.value
+        return self.value
 
-  def get_next(self):
-    return self.next_node
+    def get_next(self):
+        return self.next_node
 
-  def set_next(self, new_next):
+    def set_next(self, new_next):
     # set this node's next_node reference to the passed in node
-    self.next_node = new_next
+        self.next_node = new_next
     
 
 class Linkedlist:
@@ -86,7 +86,7 @@ def print_ll_elements(self):
             current = current.get_next()        
 
 
-linked_list = Linkedlist()
-linked_list.add_to_head(0)
-linked_list.add_to_tail(1)
-print(linked_list)
+# linked_list = Linkedlist()
+# linked_list.add_to_head(0)
+# linked_list.add_to_tail(1)
+# print(linked_list)
