@@ -4,7 +4,7 @@ import time
 
 ### ==================== VARIABLES ====================
 my_range = 1000
-my_size = 100
+my_size = 10
 
 random_nums = random.sample(range(my_range), my_size)
 
@@ -31,22 +31,27 @@ def binary_search(arr, target):
     start = 0
     end = (len(arr) - 1)
 
-    found = False
-    while end >= start and not found:
+    
+    while start <= end:
         middle_index = (start + end) // 2
         if arr[middle_index] == target:
-            found = True
+            return True
         else:
             if target < arr[middle_index]:
                 end = middle_index - 1
             if target > arr[middle_index]:
                 start = middle_index + 1
 
-    return found
+    return False
+
+
+
+nums = [4, 1, 2, 3]
+
 
 print("Binary")
 start = time.time()
 random_nums.sort()
-print(binary_search(random_nums, num_to_find))
+print(binary_search(nums, 4))
 end = time.time()
 print(f"Runtime: {end - start}")

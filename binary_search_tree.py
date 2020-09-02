@@ -89,23 +89,25 @@ class BSTNode:
 """
 This code is necessary for testing the `print` methods
 """
-bst = BinarySearchTree(1)
+bst = BSTNode(4)
 
 bst.insert(8)
 bst.insert(5)
 bst.insert(7)
 bst.insert(6)
 bst.insert(3)
-bst.insert(4)
-bst.insert(2)
+bst.insert(1)
+print(bst.for_each)
 
-bst.bft_print()
-bst.dft_print()
+print(bst.value)
 
-print("elegant methods")
-print("pre order")
-bst.pre_order_dft()
-print("in order")
-bst.in_order_dft()
-print("post order")
-bst.post_order_dft()  
+# bst.bft_print()
+# bst.dft_print()
+
+# print("elegant methods")
+# print("pre order")
+# bst.pre_order_dft()
+# print("in order")
+# bst.in_order_dft()
+# print("post order")
+# bst.post_order_dft()  
